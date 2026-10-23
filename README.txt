@@ -68,3 +68,25 @@ No license has been specified yet. Please check the repository for licensing inf
 ---
 
 Made with ❤️ for expressive little robots.
+
+## 🔌 Wiring Diagram
+
+### OLED Display (I²C)
+
+| OLED Pin to Arduino Nano |
+|---|---|
+| GND to GND |
+| VCC to 5V, only if supported by the module |
+| SDA to A4 / SDA |
+| SCK / SCL to A5 / SCL |
+
+### Push Button
+
+| Button Terminal | Arduino Nano |
+|---|---|
+| Terminal 1 to D2 |
+| Terminal 2 to GND |
+
+The sketch configures D2 as `INPUT_PULLUP`, so an external pull-up resistor is not required.
+
+**Important:** Confirm your OLED's pin labels and voltage requirements before powering it. Other Arduino-compatible boards may use different I²C pins.
